@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+	*::-webkit-scrollbar {
+    display: none;
+	}
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        inherit {
+            opacity: 1;
+        }
+    }
+
+    @keyframes glow {
+        from {
+        text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
+        }
+        
+        to {
+        text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
+        }
+    }
+
+
+html{
+    /* background */
+    background-image: 
+    linear-gradient(
+    to bottom, 
+    rgb(242, 195, 66), 
+    rgb(245, 241, 163),
+    rgb(226, 227, 110));
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+
+    body{ /*WHOLE DOC*/
+        /* height and width */
+        width: 99vw;
+        height: 99vh;
+        margin: 0 auto;
+        /* font */
+        font-family: "Figtree";
+        font-size: 2vh;
+        color: rgba(0, 0, 0, 0.8);
+            display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    }
+    
+        header{
+            background-color: rgba(240, 248, 255, 0.6);
+            color: rgb(23, 82, 83);
+            border-radius: 2vh;
+            margin: 1vh auto;
+            padding: 2vh;
+            font-size: 3vh;
+            font-weight: normal;
+            font-family: Faster One;
+            animation: glow 2s ease-in-out infinite alternate, fadeInAnimation ease 2s;
+        }
+
+        nav{
+            background-color: rgba(240, 248, 255, 0.4);
+            color: rgb(23, 82, 83);
+            border-radius: 2vh;
+            margin: 1vh auto;
+            padding: 1vh;
+            font-size: 2vh;
+            font-family: Figtree;
+            animation: fadeInAnimation ease 3s;  	
+        }
+            nav > a {
+                margin-left: 2vh;
+                margin-right: 2vh;
+            }
+
+
+
+        main{
+            /* size */
+            height: 99vh;
+            max-height: 99vh;
+            width: 99vw;
+            margin: 0 auto;
+            /* scroll */
+            overflow: scroll;
+            scrollbar-width: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* fade in */
+            animation: fadeInAnimation ease 3s;
+        }
+
+        main > div{
+            /* background and set */
+            background-color: rgba(240, 248, 255, 0.4);
+            border-radius: 3vh;
+            padding: 1vh;
+            margin: 2vh;
+            max-width: 98vw;
+			height: fit-content; 
+			max-height: 50vh;
+			overflow: scroll;
+		}
+		
+	input, select, textarea, select:focus{
+    /* background and border */
+    display: block;
+    background-color: rgba(240, 248, 255, 0.6);
+    border: none;
+    border-radius: 2vh;
+    outline: none;
+    /* size */
+    box-sizing: border-box;
+    min-width: 40vh;
+    max-width: 98vw;
+    width: max-content;
+    padding: 1vh 2vh;
+    margin: 1.25vh auto;
+    resize: none;
+    /* font */
+    font-family: "Figtree";
+    font-size: 2vh;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+button {
+    display: block;
+    margin: 1vh auto;
+    transition-duration: 0.4s;
+    box-shadow: 2px 2px gray;
+    /* background */
+    background-color: rgb(242, 195, 66);
+    /* border padding */
+    border: 0.18vh rgb(23, 82, 83) solid;
+    border-radius: 1vh;
+    padding: 0.5vh 2.5vh 0.5vh 2.5vh;
+    /* font */
+    font-size: 2vh;
+    font-family: "Figtree";
+    color: rgb(23, 82, 83);
+    text-decoration: bold;
+}
+
+    button:hover {
+        transform: translateY(-0.25vh);
+    }
+
+    .smallBtn{
+        display: inline;
+        width: auto;
+        margin: 0 0.2vh 0 0.5vh;
+        padding: 0 0.2vh 0 0.2vh;
+    }
+    
+    /* TABLES */
+table{
+    border-collapse: collapse;
+    box-sizing: border-box;
+    background-color: rgba(204, 255, 244, 0.2);
+    border: none;
+    /* padding and margin */
+    padding: 1vh;
+    margin: 1vh auto;
+    table-layout: fixed;
+    word-wrap:break-word;
+    /* height width */
+    max-width: inherit;
+}
+
+    th {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: rgb(23, 82, 83);
+        color: white;
+    }
+    td{
+/*        word-break: break-all; */
+    }
+
+    td, th {
+    border: 1px solid rgb(226, 227, 110);
+    padding: 8px;
+    }
+    
+    tr:nth-child(even){
+        background-color: rgba(240, 248, 255, 0.15);
+    }
+
+    tr:hover {
+        background-color: rgba(240, 248, 255, 0.5);
+    }
+
+ul {
+	list-style-type: none;
+	}    
+		ul > li{
+			margin: 2vh;
+		}
+img {
+	        max-width: 60vw;
+			height: fit-content; 
+			max-height: 60vh;
+			border: 1px solid rgb(226, 227, 110);
+			border-radius: 3vh;
+}
+/*Tablet 800 Half 1000 */
+@media only screen and (max-width: 1000px) {
+    main{
+        display: block;
+    }
+        main > div{
+            margin: 1vh auto;
+            width:max-content;
+            max-width: 95vw;
+        }
+    .minWidth{
+        min-width: 75vw;
+    }
+    img{
+        width: 45vh;
+        max-width: 80vw;
+    }
+}
+/* Phone is 600px*/
+@media only screen and (max-width: 600px) {
+    img{
+        width: 50vh;
+        max-width: 98vw;
+    }
+    main{
+        display: block;
+    }
+        main > div{
+            margin: 1vh auto;
+            width:max-content;
+            max-width: 95vw;
+        }
+    .minWidth{
+        min-width: 90vw;
+    }
+}
