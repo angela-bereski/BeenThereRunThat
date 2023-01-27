@@ -9,7 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- CSS only -->
-	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="./css/dashboard.css">
 	<title>Been There, Run That Dashboard</title>
 </head>
 <body class=" col-12">
