@@ -15,12 +15,12 @@ import com.angelabereski.marathonconnection.services.FilesService;
 @SpringBootApplication
 public class MarathonconnectionApplication implements CommandLineRunner {
 
-	@Resource
-	FilesService filesService;
-
 	public static void main(String[] args) {
 		SpringApplication.run(MarathonconnectionApplication.class, args);
 	}
+
+	@Resource
+	FilesService filesService;
 
 	@Bean
 	public TomcatServletWebServerFactory servletContainer() {

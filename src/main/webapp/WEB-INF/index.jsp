@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- CSS only -->
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
 	<title>Marathon Connection</title>
 </head>
 <body>
